@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>
+			Employee details
+		</title>
+		<script type = "text/javascript" src = "employee.js"></script>
+		<style>
+			
+				#firstname{
+					font-family: "Lucida Console";  
+					color: blue;       
+			    }
+			    #lastname{   
+					font-family: "Lucida Console";  
+					color: blue;       
+			    }
+			    #phno{   
+					font-family: "Lucida Console";  
+					color: blue;       
+			    }
+			    #email{   
+					font-family: "Lucida Console";  
+					color: blue;       
+			    }
+				
+			    .container{
+					border: 5px outset black;
+					text-align :center;
+					background-color :powderblue;
+					font-size :20px;
+					color : #330000 ;
+			    }<br>
+				
+		   </style>
+	</head>
+
+	<body>
+	<form name ="empdet"  action = "/employeedetails/add"> 
+	<form name ="empdet"  action = "/employeedetails/view">
+	
+	  	
+	  	
+	 
+		<center>                          
+		<h1><strong>Employee Registration </strong></h1>
+		</center>
+		<br>
+		
+		<div class="container">
+		<p>
+			First Name
+			<input id = "firstname" name = "fname" type="text" placeholder="Enter First Name">
+		
+		<p>
+			Last Name 
+			<input id = "lastname" name="lname" type="text" placeholder = "Enter Last Name"><br>
+		
+		<p>
+			<label name="gender"><b>Gender:  </b></label>
+			<input  id = "gender" name="gender" type = "radio" value = "male">
+			 male
+			<input id = "gender" name="gender" type = "radio" value = "female">
+			 female
+			<input id = "gender" name="gender" type = "radio" value = "other">
+			 other
+		
+		<p>
+			Phone Number 
+			<input id = "phno" name="phoneno" type="text" placeholder = "Enter ph.no"><br>
+		
+		<p>
+			<label><b>Email </b></label>
+			<input id = "email" name="email" type="text" placeholder = "Enter email"><br>
+		
+		<p>
+			<label><b>State</b></label>
+			<select id = "state" name = "State">
+			<option>select</option>
+			<option>AndhraPradesh</option>
+			<option>Telangana</option>
+			</select>
+			
+		<p>
+			<label for = "text"><b>Employee Address</b></label>
+			<textarea id = "Address" name="Address" rows = "3" colomns= "2">
+			</textarea>
+		
+		<P>
+			<label><b>Employee Designation:</b></label>
+			<select id = "empdes" name = "Employee Designation">
+			<option>select</option>
+			<option>Java Developer</option>   
+			<option>Web Designer</option>
+			<option>Software Tester</option>
+			</select><br>
+		<p>
+			<input type = "submit" onclick = "return add()" value = "ADD">
+			<input type = "submit" onclick = "return goback()" value = "BACK">
+		</div>
+		<div id = "tableinfo" name="tableinfo" value = "tableinfo"></div>
+		</form>
+		
+	</body>
+	
+</html>

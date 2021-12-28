@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="ISO-8859-1">
+		
+		<title>Employee details</title>
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<script>
+		
+			$(document).ready(function(){
+				$.ajax({url: "/employeedetails/view", success: function(result){
+				$("#emp_data").html(result);
+				}});
+			});
+			
+		</script>
+		
+		<style>
+		
+			h1 {
+			
+				color :Crimson;
+				text-align: center;
+				font: bold 40px candara;
+				text-shadow: 0 1px #808d93,
+							-1px 0 #cdd2d5,
+							-1px 2px #808d93,
+							-2px 1px #cdd2d5,
+							-2px 3px #808d93,
+							-3px 2px #cdd2d5,
+							-3px 4px #808d93,
+							-4px 3px #cdd2d5,
+							-4px 5px #808d93,
+							-5px 4px #cdd2d5,
+							-5px 6px #808d93,
+							-6px 5px #cdd2d5,
+							-6px 7px #808d93,
+							-7px 6px #cdd2d5,
+							-7px 8px #808d93,
+							-8px 7px #cdd2d5;
+							
+			}
+			
+			h2 {
+				
+				color: blue;
+				width:80%
+				font: bold 20px;
+				font-family:candara;
+				text-align: center;
+				
+			}
+			
+			#emp {
+				
+				border-collapse: collapse;
+				width:100%
+				border-spacing: 5px;
+				font-family: Arial, Helvetica, sans-serif;
+				background-color: green;
+				text-align: center;
+				margin-left:auto;
+				margin-right:auto
+			}
+			
+			#emp th,td {
+			
+				border: 1px solid #ddd;
+				padding: 20px;
+				text-align:center;
+				
+			}
+			
+			#emp tr:nth-child(even){
+			
+				background-color: #f2f2f2;
+				
+			}
+			#emp th{
+			
+				background-color: #4CAF50;
+				text-align: center;
+			}
+			
+			
+			#emp tr:hover {
+			
+				background-color: white;
+				
+			}
+			
+			#emp, th {
+				
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: #ddd ;
+				color: black;
+				
+			}
+			
+			
+			body{
+			
+				background-repeat: repeat;
+				background-size:100%;
+				
+			}
+			
+			.container {
+				
+				position : relative;
+				left :80%;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body background = "https://images.unsplash.com/photo-1596079890744-c1a0462d0975?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+		
+		<h1>Employee Registration</h1>
+		
+		<div class = "container">
+		
+		<p>
+			<a href = "http://localhost:8080/employeedetails/empform?action=ADD">
+				<span class="glyphicon glyphicon-edit"></span>
+				ADD NEW
+			</a><br>
+		
+		</div>
+					
+		<p>
+		
+		<div id ="emp_data">
+			
+		</div>
+		
+	</body>
+</html>
