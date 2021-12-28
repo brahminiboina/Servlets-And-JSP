@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<!-- -
+  <servlet>
+	<servlet-name>add_servlet</servlet-name>
+  	<servlet-class>com.wicore.servlets.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>add_servlet</servlet-name>
+	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>sq_servlet</servlet-name>
+  	<servlet-class>com.wicore.servlets.SqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>sq_servlet</servlet-name>
+	<url-pattern>/sq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>MyServlet</servlet-name>
+  	<servlet-class>com.wicore.servlets.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>MyServlet</servlet-name>
+	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+	<param-name>name</param-name>
+	<param-value>Brahmini</param-value>
+  </context-param>
+  <context-param>
+	<param-name>Country</param-name>
+	<param-value>India</param-value>
+  </context-param>
+   -->
+   
+<servlet>  
+	<servlet-name>jsp1</servlet-name>  
+	<jsp-file>/add.jsp</jsp-file>  
+	  
+	<init-param>  
+		<param-name>dname</param-name>  
+		<param-value>com.jdbc.mysql.driver</param-value>  
+	</init-param>   
+</servlet>    
+<servlet-mapping>  
+	<servlet-name>jsp1</servlet-name>  
+	<url-pattern>/add.jsp</url-pattern>  
+</servlet-mapping>
+
+<servlet>  
+	<servlet-name>jsp2</servlet-name>  
+	<jsp-file>/show.jsp</jsp-file>    
+</servlet>   
+<servlet-mapping>  
+	<servlet-name>jsp2</servlet-name>  
+	<url-pattern>/show.jsp</url-pattern>  
+</servlet-mapping>
+
+<context-param>  
+<param-name>country</param-name>  
+<param-value>India</param-value>  
+</context-param>    
+</web-app>
